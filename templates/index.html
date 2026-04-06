@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chronos-NeSy Dashboard</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef2f7;
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            margin: 40px auto;
+            width: 70%;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px gray;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        .result {
+            font-size: 24px;
+            color: #e74c3c;
+            margin: 15px;
+        }
+
+        .card {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        img {
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🧠 Chronos-NeSy AI Dashboard</h1>
+
+    <div class="card">
+        <h3>Enter New Patient Data</h3>
+        <form method="POST">
+            Brain Volume: <input type="number" step="0.1" name="brain" required>
+            Heart Risk: <input type="number" step="0.1" name="heart" required>
+            <br><br>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h3>Prediction Result</h3>
+        <p class="result"><b>{{ result }}</b></p>
+        <p>{{ explanation }}</p>
+        <p><b>{{ future }}</b></p>
+    </div>
+
+    <div class="card">
+        <h3>📊 Brain Graph</h3>
+        <img src="/static/brain.png" width="400">
+    </div>
+
+    <div class="card">
+        <h3>❤️ Heart Graph</h3>
+        <img src="/static/heart.png" width="400">
+    </div>
+
+</div>
+
+</body>
+</html>
